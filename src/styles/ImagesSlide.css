@@ -1,0 +1,225 @@
+/* Centers entire component */
+.imageslide-wrapper {
+  display: flex;
+  justify-content: center;
+  /* width: 1025px; */
+    margin: 0 auto;
+  background-color: black;
+  /* border:1px solid skyblue; */
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+.view-btn {
+  position: absolute;
+  right: 47px;
+  top: 39%;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+}
+
+
+.imageslide {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  /* width: 905px; */
+  height: 511px;
+  opacity: 1;
+}
+.section-title {
+  /* width: 905px; */
+  height:71px;
+  text-align: center;
+}
+
+.section-title-p {
+font-family: "Helvetica Now Text";
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.02px;
+  line-height: 100%;
+}
+
+/* Scroller container */
+.scroll-container {
+  /* width: 1190px; */
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scrolling row */
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  width: 700%;
+  height: 380px;
+
+  animation: infiniteScroll 100s linear infinite;
+}
+
+/* Images */
+.scroll-img {
+
+  width: 280px;
+  height: 340px;
+  object-fit: contain;
+  background-color: #000;   /* optional: same as your section bg */
+  border-radius: 10px; 
+  /* border:2px solid red; */
+}
+
+/* Scroll animation */
+@keyframes infiniteScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause when modal open */
+.stop-scroll {
+  animation-play-state: paused !important;
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .imageslide-wrapper {
+} 
+.imageslide {
+  /* width: 648px; */
+  height: 431px;
+}
+.section-title {
+  /* width: 648px; */
+  height:59px;
+  margin-bottom:-20px ;
+
+}
+
+.section-title-p {
+  font-size: 40px;
+}
+.scroll-container {
+  /* width: 648px; */
+  width: 880px;
+  height: 340px;
+}
+.scroll-content {
+  gap: 20px;
+  /* width: 648px; */
+  height: 340px;
+}
+.scroll-img {
+  width: 300px;
+  height: 270px;
+  /* object-fit: cover; */
+  object-fit: contain;
+  background-color: #000;   /* optional: same as your section bg */
+  border-radius: 10px; 
+}
+.view-btn {
+    right: 30px;
+    top: 41%;
+    font-size: 14px;
+    /* background-color: aqua; */
+  }
+}
+
+@media (max-width: 767px) {
+    .imageslide-wrapper {
+  /* width: 375px; */
+
+}
+.imageslide {
+  /* width: 335px; */
+  height:346px;
+  gap: 12px;
+}
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  width: 2000%;
+  height: 380px;
+  animation: infiniteScroll 60s linear infinite;
+}
+
+.section-title {
+  /* width: 335px; */
+  height:94px;
+  text-align: center;
+  margin-bottom:-30px ;
+}
+
+.section-title-p {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.scroll-container {
+  /* width: 335px; */
+  height: 240px;
+  /* animation: infiniteScroll 500s linear infinite; */
+
+}
+
+/* Scrolling row */
+.scroll-content {
+  display: flex;
+  gap: 12px;
+  /* width: max-content; */
+  /* width: 335px; */
+  height: 240px;
+}
+
+/* Images */
+.scroll-img {
+  width: 170px;
+  height: 210px;
+   object-fit: contain;
+   /* object-fit: fullfill; */
+  background-color: #000;   /* optional: same as your section bg */
+  border-radius: 10px; 
+
+}
+  .view-btn {
+    right: 10px;
+    top: 39%;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .section-title-p {
+  font-size: 28px;
+  font-weight: 900;
+}
+.scroll-img {
+  
+  background-color: #000;   /* optional: same as your section bg */
+  border-radius: 10px; 
+
+}
+.view-btn {
+    right: 5px;
+    top: 38%;
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+
+
+
+.scroll-wrapper {
+  position: relative;
+}
+
+
+
+
+

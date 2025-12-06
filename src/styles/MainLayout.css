@@ -1,0 +1,392 @@
+html, body, #root {
+  min-height: 100%;
+  width: 100%;
+  /* background-color: #10131a; */
+  overflow-x: hidden; /* only hide sideways */
+  overflow-y: auto;   /* allow scrolling */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;        /* Firefox */
+}
+
+.page-content1 {
+  /* Fix the container holding the hero */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px; 
+  z-index: 1; /* Ensure it stays above the scrolling content initially */
+  overflow: hidden;
+}
+  /* In MainLayout.css */
+
+.threecomponents {
+  /* Push content down by the fixed height (900px) */
+  margin-top: 900px; 
+  position: relative; 
+  z-index: 2; /* Must be higher than page-content1 (z-index: 1) to scroll on top */
+  background-color: #10131a; /* Must have a solid background color */
+}
+
+.hero-container {
+  position: relative;
+  /* width: 1024px; */
+  z-index: 10;  
+  height: 900px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  /* border:2px solid green; */
+}
+/* In MainLayout.css, or where .motiondiv is defined */
+
+.logo {
+  position: absolute;
+  width: 92px;
+  height: 80px;
+  top: 21px;
+  left: 57px;
+  z-index: 2;
+  object-fit: contain;
+}
+.hero-sub {
+  /* width: 1000px; */
+  /* border:2px solid green; */
+  /* max-width: 1440px; */
+  margin: auto;
+  height: 400px;
+  position: absolute;
+  top: 152px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left:12px;
+  right:12px;
+  gap: 24px;
+  opacity: 1;
+  /* border: 2px solid red; */
+}
+
+.hero-title {
+  /* font-family: "Helvetica Now Text", sans-serif; */
+  font-weight: 900;                   
+  font-size: 120px;              /* Size */
+  line-height: 130px;            /* Line height */
+  letter-spacing: 0.02em;            /* Letter spacing */
+  text-align: center;            /* Horizontal alignment */
+  text-transform: uppercase;     /* Case */
+  z-index: 2;
+  margin: 0px;
+  color:white;
+}
+.hero-subtitle{
+    width:1000px;
+    height:31px;
+
+}
+.hero-subtitle-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;         
+  font-size: 24px;
+  line-height: 100%;         /* 1.0 */
+  letter-spacing: 0.02em;        /* or use 0.02em */
+  text-align: center;  
+  color:#FFFFFF ;
+}
+.hero-sub-div{
+  line-height: 100%;         /* 1.0 */
+
+}
+
+.hero-button{
+  width: auto;
+min-width: 300px;
+ height:auto;
+ min-height:50px;
+ padding:12px 32px 12px 32px;
+ gap:10px;
+border-radius: 32px;  
+  position: relative;
+  /* top:15px; */
+}
+
+.hero-button-text {
+border-radius: 32px;  
+  position: absolute;
+  /* top:12px; */
+  bottom:12px;
+  left:32px;
+  right:32px;
+  background-color: #FD4401;
+  color: white;       
+  padding: 7px 4px;   
+  
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin-top: -5px;
+  z-index: 1;
+
+  transform: rotate(0deg); /* Angle: 0 deg */
+  border: 3px solid #ff4400; /* Keeping your previous border */
+}
+.hero-button-text a {
+  display: block;          /* makes full clickable button */
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Tablet: 768px – 1023px */
+@media (min-width: 768px) and (max-width: 1111px) {
+  .page-content1 {
+    height: 720px; /* Tablet hero height */
+  }
+  .threecomponents {
+    margin-top: 720px; /* Match fixed height */
+    z-index: 2;
+  }
+  .hero-container {
+  position: relative;
+  /* width: 768px; */
+  height: 740px; 
+}
+.logo {
+  left: 34px;
+}
+.hero-sub {
+  /* width: 700px; */
+  height: 400px;
+  top: 105px;
+ left:34px; 
+ gap:24px;
+ /* border:1px solid green */
+}
+.hero-title {
+  font-weight: 900;                   
+  font-size: 90px;              /* Size */
+  line-height: 100px;            /* Line height */
+}
+.hero-subtitle{
+    width:700px;
+    height:26px;
+
+}
+.hero-subtitle-text {
+  font-weight: 400;         
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.02em;        /* or use 0.02em */
+
+}
+
+
+.hero-button-text {      
+  padding: 7px 4px;   
+  
+  font-size: 16px;
+
+}
+}
+
+/* Mobile / Phone styles */
+@media (max-width: 767px) {
+  .page-content1 {
+    height: 450px; /* Mobile hero height */
+  }
+  .threecomponents {
+    margin-top: 450px; /* Match fixed height */
+    z-index: 2;
+  }
+  .hero-container {
+  /* max-width: 375px; */
+  height: 450px; 
+}
+.logo {
+  width: 46px;
+  height: 40px;
+  top: 21px;
+  left: 20px;
+}
+.hero-sub {
+  width: 335px;
+  height: 296px;
+  top: 112px;
+ left:20px; 
+ gap:12px;
+}
+.hero-title {
+  font-weight: 900;                   
+  font-size: 48px;              /* Size */
+  line-height: 68px;            /* Line height */
+}
+.hero-subtitle{
+    width:335px;
+    height:40px;
+
+}
+.hero-subtitle-text {
+  font-weight: 400;         
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hero-button{
+  /* width: auto; */
+width: 253px;
+ min-height:36px;
+ padding:8px 32px 8px 32px;
+ margin-top: 17px;
+border-radius: 32px;
+}
+.hero-button-text {
+
+  background-color: #FD4401;        
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 32px;
+
+}
+}
+@media (min-width: 1440px) {
+.hero-container {
+  /* width: 1440px; */
+  height: 900px; 
+}
+.logo {
+  width: 92px;
+  height: 80px;
+  top: 20px;
+  left: 114px;
+}
+.hero-sub {
+  width: 1000px;
+  height:auto;
+  top: 112px;
+ left:20px; 
+ gap:80px;
+}
+.hero-title {
+  font-weight: 900;                   
+  font-size: 140px;              /* Size */
+  line-height: 160px;            /* Line height */
+}
+
+.hero-subtitle{
+    width:1000px;
+    height:31px;
+}
+.hero-subtitle-text {
+  font-weight: 400;         
+  font-size: 24px;
+  line-height: 100%;
+}
+.hero-button{
+  /* width: auto; */
+width: 300px;
+ min-height:50px;
+ padding:12px 32px 12px 32px;
+ gap:10px
+
+}
+.hero-button-text {
+
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: -8px;
+
+}
+.hero-button{
+  width: auto;
+min-width: 300px;
+ height:auto;
+ min-height:50px;
+ padding:12px 32px 12px 32px;
+ gap:10px;
+border-radius: 32px;  
+  position: relative;
+  /* top:15px; */
+}
+
+.hero-button-text {
+border-radius: 32px;  
+  position: absolute;
+  /* top:12px; */
+  bottom:40px;
+  left:32px;
+  right:32px;
+  background-color: #FD4401;
+  color: white;       
+  padding: 7px 4px;   
+  
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin-top: -5px;
+  z-index: 1;
+
+  transform: rotate(0deg); /* Angle: 0 deg */
+  border: 3px solid #ff4400; /* Keeping your previous border */
+}
+}
+
+@media (max-width:360px) {
+  .page-content1 {
+    height: 400px; /* Smallest mobile hero height */
+  }
+  .threecomponents {
+    margin-top: 400px; /* Match fixed height */
+    z-index: 2;
+  }
+
+.hero-container {
+  position: relative;
+  /* width: 1024px; */
+  height: 400px; 
+}
+.hero-title {
+  font-weight: 900;                   
+  font-size: 38px;              /* Size */
+  line-height: 45px;            /* Line height */
+}
+.hero-sub {
+  width: 260px;
+  height: 296px;
+  top: 80px;
+ left:20px; 
+ gap:18px;
+}
+.hero-subtitle{
+    width:250px;
+    height:40px;
+
+}
+.hero-subtitle-text {
+  font-weight: 300;         
+  font-size: 14px;
+  line-height: 20px;
+}
+
+}
+
+
