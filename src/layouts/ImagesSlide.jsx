@@ -51,6 +51,7 @@ export default function ImagesSlide() {
                   {item.media_type === "VIDEO" && (
                     <video
                       className="scroll-img"
+                       style={{ objectFit: "cover" }} 
                       src={item.media_url}
                       autoPlay
                       muted

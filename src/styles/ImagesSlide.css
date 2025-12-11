@@ -8,9 +8,11 @@
   /* border:1px solid skyblue; */
   padding-left: 50px;
   padding-right: 50px;
+  /* border:2px solid green */
 
 }
 .view-btn {
+  /* border: 1px solid fuchsia; */
   position: absolute;
   right: 47px;
   top: 39%;
@@ -29,13 +31,15 @@
   align-items: center;
   gap: 32px;
   /* width: 905px; */
-  height: 511px;
+  /* height: 599px; */
   opacity: 1;
+  /* border:2px solid red; */
 }
 .section-title {
   /* width: 905px; */
   height:71px;
   text-align: center;
+  /* border:2px solid yellow; */
 }
 
 .section-title-p {
@@ -53,6 +57,7 @@ font-family: "Helvetica Now Text";
   height: 380px;
   overflow: hidden;
   position: relative;
+  /* border: 2px solid orchid; */
 }
 
 /* Scrolling row */
@@ -62,18 +67,20 @@ font-family: "Helvetica Now Text";
   width: max-content;
   width: 700%;
   height: 380px;
+  /* border: 2px solid paleturquoise; */
 
   animation: infiniteScroll 100s linear infinite;
 }
 
 /* Images */
 .scroll-img {
-
+/* border: 2px solid goldenrod; */
+margin-top: 30px;
   width: 280px;
   height: 340px;
   object-fit: contain;
   background-color: #000;   /* optional: same as your section bg */
-  border-radius: 10px; 
+  /* border-radius: 10px;  */
   /* border:2px solid red; */
 }
 
@@ -89,6 +96,7 @@ font-family: "Helvetica Now Text";
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .imageslide-wrapper {
+    /* margin-left: 20px; */
 } 
 .imageslide {
   /* width: 648px; */
@@ -106,7 +114,7 @@ font-family: "Helvetica Now Text";
 }
 .scroll-container {
   /* width: 648px; */
-  width: 880px;
+  /* width: 880px; */
   height: 340px;
 }
 .scroll-content {
@@ -129,8 +137,24 @@ font-family: "Helvetica Now Text";
     /* background-color: aqua; */
   }
 }
+@media (min-width: 601px) and (max-width: 766px) {
+  .view-btn {
+    right: 52px;
+    top: 49%;
+    padding: 0px 0px;
+    /* border:2px solid yellow; */
 
-@media (max-width: 767px) {
+    font-size: 14px;
+    /* border: 2px solid yellowgreen; */
+  }
+  .imageslide {
+  /* width: 335px; */
+  /* height:346px; */
+  /* gap: 12px; */
+  /* margin-left: 7px; */
+}
+}
+@media (max-width: 600px) {
     .imageslide-wrapper {
   /* width: 375px; */
 
@@ -184,14 +208,16 @@ font-family: "Helvetica Now Text";
    object-fit: contain;
    /* object-fit: fullfill; */
   background-color: #000;   /* optional: same as your section bg */
-  border-radius: 10px; 
+  /* border-radius: 10px;  */
 
 }
   .view-btn {
-    right: 10px;
-    top: 39%;
-    padding: 8px 18px;
+    right: 52px;
+    top: 40%;
+    padding: 0px 0px;
+
     font-size: 14px;
+    /* border: 2px solid yellowgreen; */
   }
 }
 @media (max-width: 360px) {
@@ -203,14 +229,20 @@ font-family: "Helvetica Now Text";
   
   background-color: #000;   /* optional: same as your section bg */
   border-radius: 10px; 
+margin-top: 34px;
 
 }
 .view-btn {
+  margin-top: 27px;
     right: 5px;
     top: 38%;
     font-size: 12px;
     padding: 6px 14px;
   }
+}
+.scroll-content {
+
+  animation: infiniteScroll 140s linear infinite;
 }
 
 

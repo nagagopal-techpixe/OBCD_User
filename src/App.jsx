@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import AllPosts from "./layouts/AllPosts";
-import PopupModal from './layouts/backendpop.jsx'
+import PopupModal from './layouts/mailpop.jsx'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout/>} />
         <Route path="/all-posts" element={<AllPosts/>} />
-        <Route path="/popup" element={<PopupModal/>} />
+        <Route path="/media/:mediaId" element={<PopupModal />} />
       </Routes>
     </BrowserRouter>
   );
